@@ -49,6 +49,6 @@ form.addEventListener("submit", (event) => {
       return;
     };
 
-    result.innerText = "Converted to whole number: " + resultValue;
+    result.innerText = "Demicals Removed, and changed to whole number: " + resultValue;
   });
 
