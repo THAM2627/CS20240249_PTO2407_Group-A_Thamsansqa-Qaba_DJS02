@@ -28,13 +28,22 @@ Then I should get <result> as a whole number.
 const form = document.querySelector("[data-form]");
 const result = document.querySelector("[data-result]");
 
-Given: (step) => {};
-When: (step) => {};
-Then: (step) => {};
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const entries = new FormData(event.target);
   const { dividend, divider } = Object.fromEntries(entries);
+  
+  if (isNaN(dividend) || isNaN(divider)) {
+    result. innerText = "Please enter a valid number.";
+    return;
+
+    if (divider === 0) {
+      result. innerText = "unable to divide by zero";
+      return;
+    }
+
+    
+  }
+
   result.innerText = dividend / divider;
 });
