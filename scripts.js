@@ -35,15 +35,20 @@ form.addEventListener("submit", (event) => {
   
   if (isNaN(dividend) || isNaN(divider)) {
     result. innerText = "Please enter a valid number.";
-    return;
+    return; }
 
-    if (divider === 0) {
+  if (divider === 0) {
       result. innerText = "unable to divide by zero";
       return;
     }
-
     
-  }
+    const resultValue = parseInt(dividend) / parseInt(divider);
+    
+    if (resultValue % 1 === 0) {
+      result.innerText = resultValue;
+      return;
+    }
 
-  result.innerText = dividend / divider;
-});
+    result.innerText = resultValue;
+  });
+
