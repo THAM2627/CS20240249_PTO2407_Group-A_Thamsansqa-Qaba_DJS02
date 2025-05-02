@@ -20,7 +20,7 @@ Then I should get <result> as a whole number.
   
   Scenario: Invalid Input
   Given I have entered <dividend> and <divider>
-  when <dividend> and <dividend> is not a number
+  When <dividend> and <dividend> is not a number
   Then I should get an error message.
   "Please enter a valid number." `;
 
