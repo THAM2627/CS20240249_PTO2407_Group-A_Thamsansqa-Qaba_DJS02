@@ -37,7 +37,7 @@ form.addEventListener("submit", (event) => {
     result. innerText = "Please enter a valid number.";
     return; }
 
-  if (divider === 0) {
+  if (divider === 0 || dividend === 0) {
       result. innerText = "unable to divide by zero";
       return;
     }
