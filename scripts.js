@@ -32,22 +32,23 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const entries = new FormData(event.target);
   const { dividend, divider } = Object.fromEntries(entries);
-  const  resultValue = Math.trunc(parseInt(dividend) / parseInt(divider));
+  const  resultValue = Math.trunc(dividend / divider);
   
   if (isNaN(dividend) || isNaN(divider)) {
     result. innerText = "Please enter a valid number.";
-    return; };
+    return; 
+  };
 
   if (divider === 0 || dividend === 0) {
-      result. innerText = "unable to divide by zero";
+      result. innerText = "unable to divide by zero.";
       return;
-    }
+    };
     
-    if (resultValue % 1 === 0) {
+    if (resultValue % 1 !== 0) {
       result.innerText = resultValue;
       return;
-    }
+    };
 
-    result.innerText = resultValue;
+    result.innerText = "Converted to whole number: " + resultValue;
   });
 
