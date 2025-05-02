@@ -32,17 +32,16 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const entries = new FormData(event.target);
   const { dividend, divider } = Object.fromEntries(entries);
+  const  resultValue = Math.trunc(parseInt(dividend) / parseInt(divider));
   
   if (isNaN(dividend) || isNaN(divider)) {
     result. innerText = "Please enter a valid number.";
-    return; }
+    return; };
 
   if (divider === 0 || dividend === 0) {
       result. innerText = "unable to divide by zero";
       return;
     }
-    
-    const resultValue = parseInt(dividend) / parseInt(divider);
     
     if (resultValue % 1 === 0) {
       result.innerText = resultValue;
