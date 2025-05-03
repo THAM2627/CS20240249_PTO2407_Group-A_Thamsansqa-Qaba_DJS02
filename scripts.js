@@ -43,6 +43,16 @@ form.addEventListener("submit", (event) => {
   if (isNaN(dividend) || isNaN(divider)) {
     document.body.innerHTML = "";
     document.body.style.backgroundColor = "White";
+    const noCalculationText = document.createElement("p");
+    noCalculationText.innerText = "No calculation performed.";
+    noCalculationText.style.color = "black";
+    noCalculationText.style.fontSize = "24px";
+    noCalculationText.style.textAlign = "center";
+    noCalculationText.style.position = "absolute";
+    noCalculationText.style.bottom = "0";
+    noCalculationText.style.width = "100%";
+    document.body.appendChild(noCalculationText)
+    
     debugger;
     throw new Error("Please enter a valid number."); 
   };
