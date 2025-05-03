@@ -41,14 +41,19 @@ form.addEventListener("submit", (event) => {
   };
   
   if (isNaN(dividend) || isNaN(divider)) {
-    document.body.innerHTML = "";
-    document.body.style.backgroundColor = "White";
-    const noCalculationText = document.createElement("p");
-    noCalculationText.innerText = "No calculation performed.";
-
-    
+   
+    const crashText = document.createElement("p");
+    crashText.innerText = "Something critical went wrong. Please reload the page";
+    crashText.style.color = "Black";
+    crashText.style.fontSize = "24px";
+    crashText.style.textAlign = "center";
+    crashText.style.position = "absolute";
+    crashText.style.top = "50%";
+    crashText.style.width = "100%";
+    document.body.appendChild(crashText);
     debugger;
     throw new Error("Please enter a valid number."); 
+    
   };
 
   if (dividend === 0 || divider === 0) {
