@@ -58,8 +58,9 @@ form.addEventListener("submit", (event) => {
     
   };
 
-  if (dividend === 0 || divider === 0) {
+  if (divider === 0) {
   result.innerText = "Division not performed. Invalid number provided. Try again";
+  console.error("Invalid Division."), new Error("Unable to divide by zero.");
   return;
   };
 
