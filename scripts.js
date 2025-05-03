@@ -32,11 +32,19 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const entries = new FormData(event.target);
   const { dividend, divider } = Object.fromEntries(entries);
+
   const  resultValue = Math.trunc(dividend / divider);
+
+  if (dividend === "" || divider === "") {
+    result.innerText = "Division not performed. Invalid number provided. Try again";
+    return;
+  };
   
   if (isNaN(dividend) || isNaN(divider)) {
-    result. innerText = "Please enter a valid number.";
-    return; 
+    document.body.innerHTML = "";
+    document.body.style.backgroundColor = "White";
+    debugger;
+    throw new Error("Please enter a valid number."); 
   };
 
   if (dividend === 0 || divider === 0) {
