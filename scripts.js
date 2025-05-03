@@ -39,7 +39,8 @@ form.addEventListener("submit", (event) => {
     return; 
   };
 
-  if (divider === 0) {
+  if (dividend === 0 || divider === 0) {
+    console.log("Unable to divide by zero");
   result.innerText = "unable to divide by zero.";
   return;
   };
