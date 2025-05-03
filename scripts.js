@@ -45,10 +45,10 @@ form.addEventListener("submit", (event) => {
     };
     
     if (resultValue % 1 !== 0) {
-      result.innerText = resultValue;
+      result.innerText = "Please enter whole numbers.";
       return;
     };
 
-    result.innerText = "Demicals Removed, and changed to whole number: " + resultValue;
+    result.innerText = resultValue;
   });
 
