@@ -62,11 +62,6 @@ form.addEventListener("submit", (event) => {
   result.innerText = "Division not performed. Invalid number provided. Try again";
   return;
   };
-    
-    if (dividend % 1 !== 0 || divider % 1 !== 0) {
-      result.innerText = "Please enter whole numbers.";
-      return;
-    };
 
     result.innerText = resultValue;
   });
