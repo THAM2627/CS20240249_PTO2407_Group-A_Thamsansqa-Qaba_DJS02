@@ -54,6 +54,7 @@ form.addEventListener("submit", (event) => {
     crashText.style.width = "100%";
     document.body.appendChild(crashText);
     debugger;
+    console.log ("Something critical went wrong. Please reload the page.");
     throw new Error("Please enter a valid number."); 
     
   };
