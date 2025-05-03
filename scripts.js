@@ -41,9 +41,11 @@ form.addEventListener("submit", (event) => {
   };
   
   if (isNaN(dividend) || isNaN(divider)) {
-   
+    
+    document.body.innerHTML = "";
+    document.body.style.backgroundColor = "Grey";
     const crashText = document.createElement("p");
-    crashText.innerText = "Something critical went wrong. Please reload the page";
+    crashText.innerText = "Something critical went wrong. Please reload the page.";
     crashText.style.color = "Black";
     crashText.style.fontSize = "24px";
     crashText.style.textAlign = "center";
