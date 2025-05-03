@@ -39,12 +39,12 @@ form.addEventListener("submit", (event) => {
     return; 
   };
 
-  if (divider === 0 || dividend === 0) {
+  if (divider === 0) {
       result. innerText = "unable to divide by zero.";
       return;
     };
     
-    if (resultValue % 1 !== 0) {
+    if (dividend % 1 !== 0 || divider % 1 !== 0) {
       result.innerText = "Please enter whole numbers.";
       return;
     };
