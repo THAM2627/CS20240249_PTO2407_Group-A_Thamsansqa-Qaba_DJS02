@@ -36,12 +36,12 @@ form.addEventListener("submit", (event) => {
   const  resultValue = Math.trunc(dividend / divider);
 
   if (dividend === "" || divider === "") {
-    result.innerText = "Division not performed. Invalid number provided. Try again";
-    return;
+    result.innerText = "Division not performed. Both values are required in inputs. Try again.";
+    return; 
   };
-  
+
   if (isNaN(dividend) || isNaN(divider)) {
-    
+
     document.body.innerHTML = "";
     document.body.style.backgroundColor = "Grey";
     const crashText = document.createElement("p");
@@ -59,8 +59,7 @@ form.addEventListener("submit", (event) => {
   };
 
   if (dividend === 0 || divider === 0) {
-    console.log("Unable to divide by zero");
-  result.innerText = "unable to divide by zero.";
+  result.innerText = "Division not performed. Invalid number provided. Try again";
   return;
   };
     
